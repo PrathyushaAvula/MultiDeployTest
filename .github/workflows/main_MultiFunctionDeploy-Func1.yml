@@ -8,7 +8,7 @@
       branches:
         - main
       paths:
-        - FunctionApp/
+        - FunctionApp1/
     workflow_dispatch:
 
   env:
