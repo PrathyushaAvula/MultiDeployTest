@@ -18,21 +18,21 @@
     build-and-deploy:
       runs-on: windows-latest
       steps:
-          - name: Azure Login
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Checkout
-      uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
 
-    - name: Azure CLI script file
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.0.72
-        inlineScript: |
-          chmod +x $GITHUB_WORKSPACE/sampleScript.sh
-          $GITHUB_WORKSPACE/sampleScript.sh
+      - name: Azure CLI script file
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+            chmod +x $GITHUB_WORKSPACE/sampleScript.sh
+            $GITHUB_WORKSPACE/sampleScript.sh
           
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v2
