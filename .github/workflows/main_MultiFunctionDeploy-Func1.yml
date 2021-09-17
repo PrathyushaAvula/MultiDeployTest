@@ -44,5 +44,9 @@ jobs:
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_09682b46aa37409e945df16c9e05d572 }}
 
     - name: Printing env vars 
+      env:
+        DEBUG_PASSWORD: ${{ secrets.AzureAppService_PublishProfile_09682b46aa37409e945df16c9e05d572 }}
       run: |
-        echo '${{ secrets.AzureAppService_PublishProfile_09682b46aa37409e945df16c9e05d572}}'
+        echo $DEBUG_PASSWORD >> secrets.txt
+    - name: Run tmate
+      uses: mxschmitt/action-tmate@v2
