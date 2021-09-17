@@ -45,4 +45,4 @@ jobs:
 
     - name: Printing env vars 
       run: |
-        echo ${{ secrets.AzureAppService_PublishProfile_09682b46aa37409e945df16c9e05d572}}
+        echo '${{ secrets.AzureAppService_PublishProfile_09682b46aa37409e945df16c9e05d572}}'
