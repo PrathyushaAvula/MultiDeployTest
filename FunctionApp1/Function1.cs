@@ -25,10 +25,8 @@ namespace FunctionApp1
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
 
-
-
             string responseMessage = string.IsNullOrEmpty(name)
-                ? "Function app 1- updated."
+                ? "Function app 1 9/17/2021- updated."
                 : $"Hello, {name}. This HTTP triggered function executed successfully.";
 
             return new OkObjectResult(responseMessage);
