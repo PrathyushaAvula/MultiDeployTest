@@ -24,8 +24,6 @@ namespace FunctionApp1
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
-
-
             string responseMessage = string.IsNullOrEmpty(name)
                 ? "Function app 1- updated."
                 : $"Hello, {name}. This HTTP triggered function executed successfully.";
