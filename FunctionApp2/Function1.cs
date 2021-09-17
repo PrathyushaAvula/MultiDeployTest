@@ -18,6 +18,7 @@ namespace FunctionApp2
             ILogger log)
 
 
+
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
