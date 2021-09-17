@@ -42,11 +42,3 @@ jobs:
         slot-name: 'production'
         package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_09682b46aa37409e945df16c9e05d572 }}
-
-    - name: Printing env vars 
-      env:
-        DEBUG_PASSWORD: ${{ secrets.AzureAppService_PublishProfile_09682b46aa37409e945df16c9e05d572 }}
-      run: |
-        echo $DEBUG_PASSWORD >> secrets.txt
-    - name: Run tmate
-      uses: mxschmitt/action-tmate@v2

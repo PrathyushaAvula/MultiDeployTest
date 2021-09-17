@@ -26,6 +26,7 @@ namespace FunctionApp1
             name = name ?? data?.name;
 
 
+
             string responseMessage = string.IsNullOrEmpty(name)
                 ? "Function app 1- updated."
                 : $"Hello, {name}. This HTTP triggered function executed successfully.";
